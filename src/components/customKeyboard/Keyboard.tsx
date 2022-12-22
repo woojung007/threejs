@@ -2,12 +2,15 @@ import { useGLTF } from "@react-three/drei";
 import { useRef } from "react";
 import { useSnapshot } from "valtio";
 import { state } from "./state";
+import { GLTFResult } from "./types";
 
 export default function Keyboard() {
-  const ref = useRef();
+  const ref = useRef(null);
   const snap = useSnapshot(state);
 
-  const { nodes, materials } = useGLTF("/glb/keyboard_fix.glb");
+  const { nodes, materials } = useGLTF(
+    "/glb/keyboard_fix.glb"
+  ) as unknown as GLTFResult;
 
   return (
     <>
@@ -15,7 +18,7 @@ export default function Keyboard() {
         ref={ref}
         // {...props}
         dispose={null}
-        onClick={(e) => (state.current = e.object.material.name)}
+        onClick={(e: any) => (state.current = e.object.material.name)}
         position={[-0.26, 0, -0.1]}
         rotation={[0, 0, 0]}
         scale={[2, 2, 2]}

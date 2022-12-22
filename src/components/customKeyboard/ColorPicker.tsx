@@ -9,14 +9,18 @@ export default function ColorPicker() {
     <S.HexColorPickerWrapper>
       <S.HexColorPick
         className="picker"
+        // @ts-ignore
         color={snap.items[snap.current]}
+        // @ts-ignore
         onChange={(color) => (state.items[snap.current] = color)}
       />
 
       <S.HexColorCodeWrapper>
         <S.HexColorCode>Color Code</S.HexColorCode>
         <S.HexColorPickInput
+          // @ts-ignore
           color={snap.items[snap.current]}
+          // @ts-ignore
           onChange={(color) => (state.items[snap.current] = color)}
         />
       </S.HexColorCodeWrapper>
