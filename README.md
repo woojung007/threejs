@@ -1,4 +1,4 @@
-## 1. [three.js로 커스텀 키보드 구현하기](https://github.com/woojung007/React-study/tree/master/src/threejs)
+## 1. [three.js로 커스텀 키보드 구현하기](https://github.com/woojung007/threejs/tree/main/src/components/customKeyboard)
 
 사용한 라이브러리 : react-three/fiber, react-three/drei, valtio, gsap, framer-motion, recoil
 
